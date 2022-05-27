@@ -29,9 +29,6 @@ jobs:
         pip install pylint
         pip install tox pytest pytest-benchmark
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: PyLint
-      run: |
-       tox -e py310
     - name: Test with pytest
       run: |
         python3 -m pytest test.py
